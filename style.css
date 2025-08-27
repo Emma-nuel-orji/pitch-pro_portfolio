@@ -1,0 +1,387 @@
+body {
+    font-family: sans-serif;
+    background-color: #0A192F;
+    color: #CCD6F6;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #112240;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #64FFDA;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav > div {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* Hero Section Styles */
+.hero {
+    padding: 80px 0;
+}
+
+.hero-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #CCD6F6;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: #64FFDA;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.primary-button {
+    background-color: transparent;
+    color: #64FFDA;
+    border: 1px solid #64FFDA;
+}
+
+.primary-button:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+.secondary-button {
+    background-color: #64FFDA;
+    color: #0A192F;
+}
+
+.secondary-button:hover {
+    background-color: #4ad4b3;
+}
+
+.hero-image {
+    max-width: 40%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* About Us Section Styles */
+.about-us {
+    padding: 80px 0;
+    background-color: #112240;
+}
+
+.about-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-content {
+    max-width: 50%;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #CCD6F6;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+    color: #CCD6F6;
+}
+
+.about-image {
+    max-width: 40%;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+/* Problem Solving Section Styles */
+.problem-solving {
+    padding: 80px 0;
+}
+
+.problem-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.problem-inner h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #CCD6F6;
+}
+
+.problem-inner ul {
+    list-style: none;
+    padding: 0;
+}
+
+.problem-inner li {
+    background-color: #112240;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #112240;
+    padding: 30px 0;
+    text-align: center;
+    color: #A8B2D1;
+    font-size: 0.9rem;
+}
+
+/* Placeholder for download icon */
+.download-icon::after {
+    content: '↓'; /* You can replace this with an actual icon */
+    margin-left: 5px;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .header-inner,
+    .hero-inner,
+    .about-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content,
+    .about-content,
+    .hero-image,
+    .about-image {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    nav > div {
+        margin: 0 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* --- Basic Animations (CSS) --- */
+.primary-button {
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.primary-button:hover {
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.secondary-button:hover {
+    transform: translateY(-2px);
+}
+
+
+
+.contact {
+    padding: 80px 0;
+    background-color: #112240;
+}
+
+.contact-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.contact-text {
+    flex: 1;
+    text-align: center;
+}
+
+.contact-text h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #64FFDA;
+}
+
+.contact-form-container {
+    flex: 2;
+    background-color: #0A192F;
+    padding: 40px;
+    border-radius: 5px;
+}
+
+.form-group-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+
+    
+}
+
+.form{
+    padding: 15px;
+    background-color: #112240;
+    border: 1px solid #64FFDA;
+    border-radius: 5px;
+    color: #CCD6F6;
+}
+
+.form-group-row input {
+    flex: 1;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: #112240;
+    border: 1px solid #64FFDA;
+    border-radius: 5px;
+    color: #CCD6F6;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #A8B2D1;
+}
+
+.form-button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* --- Footer Styles --- */
+footer {
+    background-color: #0A192F;
+    padding: 60px 0 20px;
+    color: #A8B2D1;
+    text-align: center;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.footer-col h3 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    color: #CCD6F6;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    font-size: 0.8rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    /* ... (existing responsive CSS code) ... */
+
+    .contact-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
