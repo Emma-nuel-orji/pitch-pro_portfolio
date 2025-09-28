@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go-Pitch Pro - About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Specific styling for the About Us page layout */
+        .about-section {
+            padding: 50px 0;
+            background-color: var(--bg-color-2); /* Light gray/off-white background */
+        }
+        .about-header {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--text-color-main);
+            margin-bottom: 5rem;
+            padding-top: 100px;
+        }
+        .story-block {
+            padding: 2rem 0;
+            border-top: 1px solid var(--bg-color-2); /* Light divider */
+        }
+        .story-block:first-child {
+            border-top: none;
+        }
+        .story-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        .story-content {
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+        .team-profile {
+            background-color: var(--bg-color-1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+        .team-profile img {
+            border-radius: 8px;
+            object-fit: cover;
+            width: 100%;
+            max-height: 250px;
+        }
+        .team-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 5rem;
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+<body class="about-page">
+
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: var(--thick-gray) !important;">
+        <div class="container-fluid container-xl">
+            <a class="navbar-brand" href="index.html" style="color: var(--text-color-light) !important;">Go-Pitch Pro</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn btn-primary d-none d-lg-block">Join Waitlist</button>
+                    <button id="theme-toggle" class="btn theme-toggle">
+                        <i class="fas fa-mobile-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="about-section">
+        <div class="container container-xl">
+            <h4 class="about-header animate-on-scroll">ABOUT US</h4>
+
+            <div class="row story-block animate-on-scroll delay-1">
+                <div class="col-md-4">
+                    <h3 class="story-title">Our Story</h3>
+                </div>
+                <div class="col-md-8">
+                    <p class="story-content">Pitch Pro was born on the football pitches of Nigeria. Our founder, a former athlete, saw a massive gap: raw talent in Africa wasn't being discovered because scouting was expensive and lacked data. We created Pitch Pro to bridge that gap. Our platform uses advanced AI and hyper-localized data to streamline the process, democratizing scouting by giving everyone the chance to find the future of football.</p>
+                </div>
+            </div>
+
+            <div class="row story-block animate-on-scroll delay-2">
+                <div class="col-md-4">
+                    <h3 class="story-title">Our Mission</h3>
+                </div>
+                <div class="col-md-8">
+                    <p class="story-content">To personalize football scouting by building the most accessible and comprehensive platform for discovering emerging talent across Africa.</p>
+                </div>
+            </div>
+
+            <div class="row story-block animate-on-scroll delay-3">
+                <div class="col-md-4">
+                    <h3 class="story-title">Our Vision</h3>
+                </div>
+                <div class="col-md-8">
+                    <p class="story-content">To be the definitive bridge that connects raw, undiscovered African talent with professional clubs globally, ensuring every player with potential has a chance to be seen.</p>
+                </div>
+            </div>
+
+            <h4 class="about-header team-title animate-on-scroll">Our Visionary, Collaborative and Savvy Team Members</h4>
+
+            <div class="row justify-content-center animate-on-scroll delay-4">
+                <div class="col-md-8">
+                    <div class="row team-profile">
+                        <div class="col-md-4 mb-3 mb-md-0">
+                            <img src="https://i.ibb.co/3sS7Lqg/uchenna-victor.jpg" alt="Uchenna Victor (CEO)" class="img-fluid">
+                        </div>
+                        <div class="col-md-8">
+                            <h4 class="fw-bold">Uchenna Victor</h4>
+                            <p class="text-muted">(CEO)</p>
+                            <p>Uchenna Victor is the first child of three, hailing from Imo state Nigeria. He got into the tech space in 2024 and is now a professional UI/UX designer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center animate-on-scroll delay-5">
+                <div class="col-md-8">
+                    <div class="row team-profile">
+                        <div class="col-md-4 mb-3 mb-md-0">
+                            <img src="https://i.ibb.co/C0hYp9b/orji-emmanuel.jpg" alt="Orji Emmanuel (CTO)" class="img-fluid">
+                        </div>
+                        <div class="col-md-8">
+                            <h4 class="fw-bold">Orji Emmanuel</h4>
+                            <p class="text-muted">(CTO)</p>
+                            <p>Orji Emmanuel is the second child of four, hailing from Enugu state Nigeria. He got into the tech space in 2021 and he's now a professional full stack developer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer py-4 text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Pitch Pro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

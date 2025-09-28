@@ -1,0 +1,195 @@
+/* Custom properties for colors (light and dark themes) */
+:root {
+    --bg-color-1: #fbfdff; /* Hero section bg */
+    --bg-color-2: #ffffff; /* Features section bg */
+    --bg-color-3: #f5f6f8; /* Testimonials section bg */
+    --bg-color-4: #0d1b2a; /* CTA section bg */
+
+    --text-color: #333;
+    --primary-color: #007bff;
+    --cta-btn-color: #007bff;
+}
+
+[data-theme="dark"] {
+    --bg-color-1: #0d1b2a;
+    --bg-color-2: #152536;
+    --bg-color-3: #2a3c4c;
+    --bg-color-4: #007bff;
+
+    --text-color: #f8f9fa;
+    --primary-color: #17a2b8;
+    --cta-btn-color: #f8f9fa;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color-2);
+    color: var(--text-color);
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+    transition: color 0.5s ease-in-out;
+}
+
+/* Navbar */
+.navbar {
+    background-color: transparent !important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link,
+.theme-toggle {
+    color: white !important;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.theme-toggle .fa-sun,
+[data-theme="dark"] .fa-moon {
+    display: block;
+}
+
+.theme-toggle .fa-moon,
+[data-theme="dark"] .fa-sun {
+    display: none;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--bg-color-4);
+    background-image: url('https://i.ibb.co/b17hD5m/go-pitch-bg.jpg');
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    padding-top: 5rem;
+    position: relative;
+    color: white;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    border-radius: 25px;
+    padding: 0.75rem 2.5rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Sections */
+#features { background-color: var(--bg-color-2); }
+#testimonials { background-color: var(--bg-color-3); }
+#cta { background-color: var(--bg-color-4); }
+
+/* Testimonials Carousel */
+.testimonial-card {
+    background-color: var(--bg-color-2);
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.5s ease;
+}
+
+.testimonial-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/* Call to Action */
+.cta-section .form-control {
+    border-radius: 25px 0 0 25px;
+    border: none;
+    padding: 0.75rem 1.5rem;
+}
+
+.cta-section .btn {
+    border-radius: 0 25px 25px 0;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--bg-color-2);
+    border-top: 1px solid #e9ecef;
+    transition: background-color 0.5s ease;
+}
+
+[data-theme="dark"] .footer {
+    border-top-color: var(--bg-color-3);
+}
+
+/* Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-on-scroll.delay-1 { transition-delay: 0.1s; }
+.animate-on-scroll.delay-2 { transition-delay: 0.2s; }
+.animate-on-scroll.delay-3 { transition-delay: 0.3s; }
+
+/* Mobile Responsiveness */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: var(--bg-color-3);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+    }
+    .navbar-nav .nav-link { color: var(--text-color) !important; }
+    .hero-section { background-attachment: scroll; height: auto; padding-top: 7rem; padding-bottom: 4rem; }
+    .hero-section .text-content, .hero-section .image-content { text-align: center; }
+}

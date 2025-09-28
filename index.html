@@ -1,120 +1,173 @@
 <!DOCTYPE html>
- <html lang="en">
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Go-Pitch Pro</title>
-     <link rel="stylesheet" href="style.css">
- </head>
- <body>
-     <header>
-         <div class="container header-inner">
-             <div class="logo">Go-Pitch Pro</div>
-             <nav>
-                 <div class="search-icon"></div>
-                 <div class="theme-toggle"></div>
-                 <div class="language-dropdown"></div>
-             </nav>
-         </div>
-     </header>
- 
-     <main>
-         <section class="hero">
-             <div class="container hero-inner">
-                 <div class="hero-content">
-                     <h1>Streaming the future of <span class="highlight">sports</span></h1>
-                     <div class="hero-buttons">
-                         <a href="#" class="button primary-button">Read More</a>
-                         <a href="#" class="button secondary-button">Download App <span class="download-icon"></span></a>
-                     </div>
-                 </div>
-                 <div class="hero-image">
-                     <img src="static/images/hero-image.png" alt="Streaming Devices" loading="lazy">
-                 </div>
-             </div>
-         </section>
- 
-         <section class="about-us">
-             <div class="container about-inner">
-                 <div class="about-content">
-                     <h2>About us</h2>
-                     <p>Go-Pitch Pro is a cutting-edge sports streaming service dedicated to bringing you the best local and global sporting events right to your fingertips. We believe in making sports accessible to everyone, everywhere.</p>
-                     <p>Our platform is built with the latest technology to ensure a seamless and high-quality streaming experience. From live matches to in-depth analysis and exclusive content, we've got you covered.</p>
-                     <p>Vision: To empower fans all over Nigeria and Africa to experience the thrill of sports without boundaries.</p>
-                 </div>
-                 <div class="about-image">
-                     <img src="static/images/about-image.png" alt="Man working on a computer" loading="lazy">
-                 </div>
-             </div>
-         </section>
- 
-         <section class="problem-solving">
-             <div class="container problem-inner">
-                 <h2>PROBLEM WE'RE SOLVING</h2>
-                 <ul>
-                     <li>Limited access to quality streaming for local and global sports in Nigeria and much of Africa</li>
-                     <li>Interactive Match Highlights with real-time stats</li>
-                     <li>Social Feed For Fans to chat comment, and follow matches in real-time</li>
-                 </ul>
-             </div>
-         </section>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go-Pitch Pro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
 
-         <section class="contact">
-            <div class="container contact-inner">
-                <div class="contact-text">
-                    <h2>Suggestion & Complain</h2>
-                </div>
-                <div class="contact-form-container">
-
-                    <p>Email Us <a href="mailto:hhc">Go-Pitch@gmail.com</a></p>
-                    <p>contact <a href="tell:21122">221555555555555555</a></p>
-                    <!-- <form class="contact-form" id="contactForm">
-                        <div class="form-group-row">
-                            <input class="form" type="text" id="name" name="name" placeholder="Name" required>
-                            <input class="form" type="email" id="email" name="email" placeholder="Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
-                        </div>
-                        <button type="submit" class="button form-button">Send Message</button>
-                    </form> -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid container-xl">
+            <a class="navbar-brand text-white" href="index.html">Go-Pitch Pro</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="team.html">Tean</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn btn-primary d-none d-lg-block">Join Waitlist</button>
+                    <button id="theme-toggle" class="btn theme-toggle"><i class="fas fa-moon"></i></button>
                 </div>
             </div>
-        </section>
-     </main>
- 
-     <footer>
+        </div>
+    </nav>
 
-        <div class="container footer-inner">
-            <div class="footer-columns">
-                <div class="footer-col">
-                    <h3><a href="#">Home</a></h3>
+    <section class="hero-section text-white d-flex align-items-center justify-content-center">
+        <div class="container container-xl text-center">
+            <div class="row">
+                <div class="col-12 text-content animate-on-scroll">
+                    <h1   style="color: rgb(23, 23, 189);" class="display-1 fw-bold">Watch. Scout. <small style="color: bisque;">Transform.</small></h1>
+                    <p class="lead my-4 px-lg-5 mx-lg-5 animate-on-scroll delay-1">Experience football without limits. Pitch Pro lets fans stream live matches, while delivering advanced scouting tools that empower clubs, coaches, and scouts to discover tomorrow's stars today.</p>
+                    <button class="btn btn-primary btn-lg mt-3 animate-on-scroll delay-2">Join Waitlist</button>
                 </div>
-                <div class="footer-col">
-                    <h3><a href="#">About us</a></h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="py-5">
+        <div class="container container-xl">
+            <div class="row align-items-center animate-on-scroll">
+                <div class="col-lg-6 benefit-image">
+                    <img src="img/hero.jpg" alt="Benefits of Go-Pitch Pro" class="img-fluid" loading="lazy">
                 </div>
-                <div class="footer-col contact-info">
-                    <h3>Contact</h3>
-                    <p>Phone No: +2347038861105</p>
-                    <p>Email: gopitchpro00@gmail.com</p>
-                    <div class="social-icons">
-                        <a href="#">F</a>
-                        <a href="#">I</a>
-                        <a href="#">T</a>
+                <div class="col-lg-6 benefit-text mt-4 mt-lg-0 animate-on-scroll delay-1">
+                    <h2 class="fw-bold">Experience the True Benefits of Pitch Pro.</h2>
+                    <p class="lead my-4">No more digging through stats. With Pitch Pro, you can stream live matches and discover tomorrow’s talent all in one streamlined platform.</p>
+                    <ul class="list-unstyled benefits-list">
+                        <li class="mb-3 d-flex align-items-start">
+                            <span class="icon me-3"><i class="fa-solid fa-square-check"></i></span>
+                            <div>
+                                <h5 class="fw-bold">Hyper-Localized Data</h5>
+                                <span>Access unique data and reports from emerging African leagues that no one else has.</span>
+                            </div>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                             <span class="icon me-3"><i class="fa-solid fa-square-check"></i></span>
+                            <div>
+                                <h5 class="fw-bold">Intuitive Player Discovery</h5>
+                                <span>Find and analyze talent in minutes with our powerful search and filter features.</span>
+                            </div>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                             <span class="icon me-3"><i class="fa-solid fa-square-check"></i></span>
+                            <div>
+                                <h5 class="fw-bold">Actionable Insights</h5>
+                                <span>From live streaming to visual analytics, Pitch Pro takes you beyond raw data with insights that matter.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-5">
+        <div class="container container-xl text-center">
+            <h2 class="fw-bold animate-on-scroll">Transform Your Scouting Practice with Our Platform</h2>
+            <p class="lead text-muted mb-5 animate-on-scroll delay-1">A glimpse into the user-friendly interface that makes finding talent simple and efficient.</p>
+            <div class="row justify-content-center g-4">
+                <div class="col-md-4 feature-card-col animate-on-scroll delay-2">
+                    <div class="feature-card">
+                        <p class="fw-bold mb-0">In-Depth Player Analytics</p>
+                    </div>
+                </div>
+                <div class="col-md-4 feature-card-col animate-on-scroll delay-3">
+                    <div class="feature-card">
+                        <p class="fw-bold mb-0">Real-Time Video Clips</p>
+                    </div>
+                </div>
+                <div class="col-md-4 feature-card-col animate-on-scroll delay-4">
+                    <div class="feature-card">
+                        <p class="fw-bold mb-0">Collaborative Team Dashboard</p>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>Terms of Service - Privacy Policy</p>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-5 testimonials-section">
+        <div class="container container-xl">
+            <h2 class="text-center fw-bold mb-5 animate-on-scroll">What Our Users Say</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 testimonial-col animate-on-scroll delay-1">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"As a fan, I love the feeling of being an insider. Pitch Pro gives me a whole new way to experience football and find myself sharing my friends my 'discoveries'."</p>
+                        <div class="user-info d-flex align-items-center mt-4">
+                            <span class="user-initials me-3">U1</span>
+                            <div>
+                                <span class="fw-bold d-block">Chidi Okoye</span>
+                                <small class="text-muted">Passionate Fan</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 testimonial-col animate-on-scroll delay-2">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"The simplicity of this tool is a game-changer. We've been able to identify and recruit players for a fraction of the time, which is crucial for our budget."</p>
+                        <div class="user-info d-flex align-items-center mt-4">
+                            <span class="user-initials me-3">U2</span>
+                            <div>
+                                <span class="fw-bold d-block">Efeagu Boland</span>
+                                <small class="text-muted">Academy Manager</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 testimonial-col animate-on-scroll delay-3">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"I'm so grateful that pitch pro came to Africa. It has unlocked so many opportunities for young players, coaches, and clubs in the region. The data is truly a game-changer!"</p>
+                        <div class="user-info d-flex align-items-center mt-4">
+                            <span class="user-initials me-3">U3</span>
+                            <div>
+                                <span class="fw-bold d-block">Ajimole Shade</span>
+                                <small class="text-muted">Active Scout</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
+    <section id="cta" class="cta-section py-5 text-white">
+        <div class="container container-xl text-center">
+            <h2 class="fw-bold mb-3 animate-on-scroll">Ready to Find Your Next Star?</h2>
+            <p class="lead text-white-50 mb-4 animate-on-scroll delay-1">Join our waitlist to get early access to our platform. We're launching soon and can't wait for you to start your scouting journey.</p>
+            <div class="input-group mx-auto cta-form animate-on-scroll delay-2">
+                <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email address">
+                <button class="btn btn-primary" type="button">Join Waitlist</button>
+            </div>
+        </div>
+    </section>
 
-         <div class="container footer-inner">
-             <p>&copy; 2023 Go-Pitch Pro. All rights reserved.</p>
-         </div>
-     </footer>
- 
-     <script src="static/js/script.js"></script>
- </body>
- </html>
+    <footer class="footer py-4 text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Pitch Pro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

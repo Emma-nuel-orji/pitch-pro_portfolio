@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go-Pitch Pro - Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Specific styling for the Contact page layout */
+        .contact-page-section {
+            padding-top: 50px;
+            background-color: var(--bg-color-2); /* Light gray/off-white background */
+            min-height: 80vh;
+        }
+        .contact-header-text {
+            text-align: center;
+            padding-top: 100px; /* Space for the fixed nav bar */
+            margin-bottom: 2rem;
+        }
+        .contact-header-text h2 {
+            font-weight: 700;
+        }
+        .contact-info-block {
+            padding: 2rem;
+        }
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+        .info-icon {
+            color: var(--accent-color); /* Using your brand blue for icons */
+            font-size: 1.5rem;
+            margin-right: 1.5rem;
+            min-width: 30px;
+        }
+        .info-details h5 {
+            font-weight: 600;
+        }
+        
+        /* Contact Form Styles */
+        .contact-form-area .form-control {
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--card-border);
+            transition: border-color 0.3s ease;
+        }
+        .contact-form-area textarea {
+            min-height: 200px;
+            resize: none;
+        }
+        .contact-form-area .btn-primary {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        /* Bottom CTA Section */
+        .bottom-cta-section {
+            background-color: var(--bg-color-1);
+            padding: 4rem 0;
+        }
+        .social-icons a {
+            color: var(--text-color-main);
+            font-size: 1.5rem;
+            margin-left: 1rem;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: var(--brand-red); /* Highlight social icons with red */
+        }
+    </style>
+</head>
+<body class="contact-page">
+
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: var(--thick-gray) !important;">
+        <div class="container-fluid container-xl">
+            <a class="navbar-brand" href="index.html" style="color: var(--text-color-light) !important;">Go-Pitch Pro</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn btn-primary d-none d-lg-block">Join Waitlist</button>
+                    <button id="theme-toggle" class="btn theme-toggle">
+                        <i class="fas fa-mobile-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="contact-page-section">
+        <div class="container container-xl">
+            <div class="contact-header-text animate-on-scroll">
+                <p class="text-muted mb-1">Contact Us</p>
+                <h2>Contact our help desk for assistance</h2>
+            </div>
+
+            <div class="row align-items-start pt-4">
+                
+                <div class="col-lg-5 contact-info-block animate-on-scroll delay-1">
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-home"></i></div>
+                        <div class="info-details">
+                            <h5>Our head office address:</h5>
+                            <p class="mb-0">No 18 Lumumba street New Heaven, Enugu, Nigeria</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="info-details">
+                            <h5>Mail us for information:</h5>
+                            <p class="mb-0">gopitchpro001@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="info-details">
+                            <h5>Phone Us:</h5>
+                            <p class="mb-1">+2347038861105</p>
+                            <p class="mb-0">+2348124941387</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 contact-form-area animate-on-scroll delay-2">
+                    <form action="#" method="POST">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Your Name*" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="Your Email*" required>
+                            </div>
+                        </div>
+                        <textarea class="form-control" placeholder="Message...." required></textarea>
+                        <button type="submit" class="btn btn-primary">
+                            Send Now <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bottom-cta-section">
+        <div class="container container-xl">
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-start text-center">
+                    <h4 class="fw-bold">We are Pitch Pro</h4>
+                    <p class="text-muted mb-2">We are Pitch Pro, a Sports Streaming and Athletes scouting platform</p>
+                    <p class="fw-bold">Open Hours:</p>
+                    <p class="text-muted">Mon - Sat: 8 am - 5 pm, Sunday, CLOSED.</p>
+                </div>
+                <div class="col-md-4 text-md-end text-center social-icons mt-4 mt-md-0">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-medium-m"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer py-4 text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Pitch Pro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
